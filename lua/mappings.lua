@@ -53,4 +53,21 @@ for _, lsp in ipairs(servers) do
     }
 end
 
-
+-- Windows
+vimp.nnoremap('<leader>ww', ':wincmd w<cr>')
+vimp.nnoremap('<leader>wj', ':wincmd j<cr>')
+vimp.nnoremap('<leader>wh', ':wincmd h<cr>')
+vimp.nnoremap('<leader>wk', ':wincmd k<cr>')
+vimp.nnoremap('<leader>wl', ':wincmd l<cr>')
+vimp.nnoremap('<leader>wJ', ':wincmd J<cr>')
+vimp.nnoremap('<leader>wK', ':wincmd K<cr>')
+vimp.nnoremap('<leader>wH', ':wincmd H<cr>')
+vimp.nnoremap('<leader>wL', ':wincmd L<cr>')
+vimp.nnoremap('<leader>wv', ':vsplit<cr>')
+vimp.nnoremap('<leader>ws', ':split<cr>')
+vimp.nnoremap('<leader>w<', ':vert res -10<cr>')
+vimp.nnoremap('<leader>w>', ':vert res +10<cr>')
+vimp.nnoremap('<leader>w=', ':wincmd =<cr>')
+vimp.nnoremap('<leader>w-', ':res -10<cr>')
+vimp.nnoremap('<leader>w+', ':res +10<cr>')
+vimp.nnoremap('<leader>w0', ':wincmd c<cr>')

@@ -10,7 +10,6 @@ vimp.nnoremap('<leader>fb', telescope.buffers)
 vimp.nnoremap('<leader>fh', telescope.help_tags)
 vimp.nnoremap('<leader>fcr', telescope.lsp_references)
 vimp.nnoremap('<leader>fcs', telescope.lsp_workspace_symbols)
-vimp.nnoremap('<leader>fca', telescope.lsp_code_actions)
 vimp.nnoremap('<leader>fcd', telescope.lsp_workspace_diagnostics)
 vimp.nnoremap('<leader>ft', telescope.treesitter)
 
@@ -19,8 +18,8 @@ local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
     vimp.nnoremap({'silent'}, 'K', vim.lsp.buf.hover)
     vimp.nnoremap({'silent'}, 'gd', vim.lsp.buf.definition)
-    vimp.nnoremap({'silent'}, 'ca', vim.lsp.buf.code_action)
-    vimp.nnoremap({'silent'}, 'D', vim.lsp.buf.type_definition)
+    vimp.nnoremap({'silent'}, '<leader>ca', vim.lsp.buf.code_action)
+    vimp.nnoremap({'silent'}, '<leader>cr', vim.lsp.buf.rename)
 end
 
 local servers = { 'rust_analyzer' }

@@ -7,18 +7,34 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(
-	function(use)
-		-- Packer can manage itself
-		use 'wbthomason/packer.nvim'
-		use {
-			'nvim-treesitter/nvim-treesitter',
-			run = ':TSUpdate'
-		}
+    function(use)
+        -- Packer can manage itself
+        use 'wbthomason/packer.nvim'
+        use {
+            'nvim-treesitter/nvim-treesitter',
+            run = ':TSUpdate'
+        }
 
-		use 'neovim/nvim-lspconfig'
+        -- Companion to help writing my vim configuration scripts.
+        use 'svermeulen/vimpeccable'
+        use 'rafcamlet/nvim-luapad'
 
-		if packer_bootstrap then
-			require('packer').sync()
-		end
-	end
+        use {
+            'nvim-telescope/telescope.nvim',
+            requires = { {'nvim-lua/plenary.nvim'} }
+        }
+
+        use 'wsdjeg/luarefvim'
+        use 'euclidianAce/BetterLua.vim'
+        use 'neovim/nvim-lspconfig'
+
+        use 'ntpeters/vim-better-whitespace'
+
+        -- colorschemes
+        use 'tomasiser/vim-code-dark'
+
+        if packer_bootstrap then
+            require('packer').sync()
+        end
+    end
 )

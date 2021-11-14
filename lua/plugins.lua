@@ -27,6 +27,10 @@ return require('packer').startup(
         use 'wsdjeg/luarefvim'
         use 'euclidianAce/BetterLua.vim'
         use 'neovim/nvim-lspconfig'
+        use 'hrsh7th/cmp-nvim-lsp'
+        use 'hrsh7th/nvim-cmp'
+        use 'L3MON4D3/LuaSnip'
+        use 'saadparwaiz1/cmp_luasnip'
 
         use 'ntpeters/vim-better-whitespace'
 

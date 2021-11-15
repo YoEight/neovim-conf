@@ -31,10 +31,13 @@ return require('packer').startup(
         use 'hrsh7th/nvim-cmp'
         use 'L3MON4D3/LuaSnip'
         use 'saadparwaiz1/cmp_luasnip'
+        use 'kyazdani42/nvim-tree.lua'
+        use 'tpope/vim-commentary'
 
         use 'ntpeters/vim-better-whitespace'
 
-        -- colorschemes
+        -- UI
+        use 'kyazdani42/nvim-web-devicons'
         use 'tomasiser/vim-code-dark'
 
         if packer_bootstrap then

@@ -71,3 +71,11 @@ vimp.nnoremap('<leader>w=', ':wincmd =<cr>')
 vimp.nnoremap('<leader>w-', ':res -10<cr>')
 vimp.nnoremap('<leader>w+', ':res +10<cr>')
 vimp.nnoremap('<leader>w0', ':wincmd c<cr>')
+
+-- Terminal
+vimp.nnoremap('<leader>`', ':20split term://zsh<cr>')
+
+-- Tree
+vimp.nnoremap('<C-n>', ':NvimTreeToggle<cr>')
+vimp.nnoremap('<leader>r', ':NvimTreeRefresh<cr>')
+vimp.nnoremap('<leader>n', ':NvimTreeFindFile<cr>')

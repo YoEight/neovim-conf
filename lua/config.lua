@@ -1,21 +1,3 @@
--- local indent = 4
---
--- vim.api.nvim_set_option('expandtab', true)
--- vim.api.nvim_set_option('tabstop', indent)
--- vim.api.nvim_set_option('shiftwidth', indent)
--- vim.api.nvim_set_option('wrap', false)
--- vim.api.nvim_set_option('showmatch', true)
--- vim.api.nvim_set_option('cursorline', true)
--- vim.api.nvim_set_option('relativenumber', true)
--- vim.api.nvim_set_option('splitbelow', true)
--- vim.api.nvim_set_option('splitright', true)
--- vim.api.nvim_set_option('termguicolors', true)
--- vim.api.nvim_set_option('number', true)
--- vim.api.nvim_set_option('smartcase', true)
--- vim.api.nvim_set_option('wildmode', 'list:longest')
--- vim.api.nvim_set_option('completeopt', 'menuone,noinsert,noselect')
--- vim.api.nvim_set_option('list', true)
-
 -- vim.o: for setting global options
 -- vim.bo: for setting buffer-scoped options
 -- vim.wo: for setting window-scoped options
@@ -30,6 +12,7 @@ vim.o.smartcase = true -- Don't ignore case with capitals
 vim.o.splitbelow = true -- Put new window below current
 vim.o.splitright = true -- Put new window right current
 vim.o.termguicolors = true -- True color support
+vim.o.showmode = false
 vim.o.wildmode = 'list:longest' -- Command-line completion mode
 vim.o.showmatch = true
 vim.wo.list = true -- Show some invisible characters (tabs)

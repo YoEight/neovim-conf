@@ -9,7 +9,7 @@ vimp.nnoremap('<leader>fg', telescope.git_files)
 vimp.nnoremap('<leader>fb', telescope.buffers)
 vimp.nnoremap('<leader>fh', telescope.help_tags)
 vimp.nnoremap('<leader>fcr', telescope.lsp_references)
-vimp.nnoremap('<leader>fcs', telescope.lsp_workspace_symbols)
+vimp.nnoremap('<leader>fcs', telescope.lsp_dynamic_workspace_symbols)
 vimp.nnoremap('<leader>fcd', telescope.lsp_workspace_diagnostics)
 vimp.nnoremap('<leader>ft', telescope.treesitter)
 
@@ -39,6 +39,7 @@ local on_attach = function(client, bufnr)
     vimp.nnoremap({'silent'}, 'gd', vim.lsp.buf.definition)
     vimp.nnoremap({'silent'}, '<leader>ca', vim.lsp.buf.code_action)
     vimp.nnoremap({'silent'}, '<leader>cr', vim.lsp.buf.rename)
+    vimp.nnoremap({'silent'}, '<leader>F', vim.lsp.buf.formatting)
 end
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 

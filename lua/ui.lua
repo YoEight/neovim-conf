@@ -50,7 +50,17 @@ require('nvim-tree').setup {
   }
 }
 
+vim.g.vscode_style = "dark"
+
+require('lualine').setup {
+  options = {
+    theme = 'vscode',
+    component_separators = { left = '\\', right = '/'},
+    section_separators = {left = '◣', right = '◢'},
+  }
+}
+
 vim.cmd [[
     highlight NvimTreeFolderIcon guibg=blue
-    colorscheme codedark
+    colorscheme vscode
 ]]

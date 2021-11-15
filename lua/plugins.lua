@@ -33,12 +33,14 @@ return require('packer').startup(
         use 'saadparwaiz1/cmp_luasnip'
         use 'kyazdani42/nvim-tree.lua'
         use 'tpope/vim-commentary'
+        use 'tpope/vim-fugitive'
 
         use 'ntpeters/vim-better-whitespace'
 
         -- UI
         use 'kyazdani42/nvim-web-devicons'
-        use 'tomasiser/vim-code-dark'
+        use 'Mofiqul/vscode.nvim'
+        use 'hoob3rt/lualine.nvim'
 
         if packer_bootstrap then
             require('packer').sync()

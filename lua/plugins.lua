@@ -39,7 +39,8 @@ return require('packer').startup(
 
         -- UI
         use 'kyazdani42/nvim-web-devicons'
-        use 'Mofiqul/vscode.nvim'
+        -- use 'Mofiqul/vscode.nvim'
+        use 'sainnhe/gruvbox-material'
         use 'hoob3rt/lualine.nvim'
 
         if packer_bootstrap then

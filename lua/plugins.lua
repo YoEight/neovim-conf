@@ -34,6 +34,7 @@ return require('packer').startup(
         use 'kyazdani42/nvim-tree.lua'
         use 'tpope/vim-commentary'
         use 'tpope/vim-fugitive'
+        -- use 'mfussenegger/nvim-jdtls'
 
         use 'ntpeters/vim-better-whitespace'
 

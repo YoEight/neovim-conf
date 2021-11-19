@@ -43,7 +43,7 @@ local on_attach = function(client, bufnr)
 end
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local servers = { 'rust_analyzer', "gopls" }
+local servers = { 'rust_analyzer', 'gopls', 'jdtls' }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach,
@@ -53,6 +53,29 @@ for _, lsp in ipairs(servers) do
         }
     }
 end
+
+-- Java LSP
+-- local utils = require('./utils')
+-- local jar_opts = utils.tbl_join({
+--         'java',
+--         '-Declipse.application=org.eclipse.jdt.ls.core.id1 ',
+--         '-Dosgi.bundles.defaultStartLevel=4 ',
+--         '-Declipse.product=org.eclipse.jdt.ls.core.product ',
+--         '-Dlog.level=ALL ',
+--         '-noverify',
+--         '-Xmx2G',
+--         '-jar',
+--         vim.env.JDTLS_HOME .. '/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
+--         '-configuration',
+--         vim.env.JDTLS_HOME .. '/config_linux',
+--         '-data',
+--         vim.env.WORKSPACE,
+--         '--add-opens',
+--         'java.base/java.util=ALL-UNNAMED',
+--         '--add-opens',
+--         'java.base/java.util=ALL-UNNAMED',
+-- }, ' ')
+
 
 -- Windows
 vimp.nnoremap('<leader>ww', ':wincmd w<cr>')

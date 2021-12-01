@@ -42,6 +42,7 @@ return require('packer').startup(
         use 'kyazdani42/nvim-web-devicons'
         use 'akinsho/toggleterm.nvim'
         use 'lukas-reineke/indent-blankline.nvim'
+        use 'onsails/lspkind-nvim'
         -- use 'Mofiqul/vscode.nvim'
         use 'sainnhe/gruvbox-material'
         use 'hoob3rt/lualine.nvim'

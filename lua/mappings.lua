@@ -14,8 +14,12 @@ vimp.nnoremap('<leader>fcd', telescope.lsp_workspace_diagnostics)
 vimp.nnoremap('<leader>ft', telescope.treesitter)
 
 -- CMP
+local lspkind = require('lspkind')
 local cmp = require('cmp')
 cmp.setup({
+    formatting = {
+      format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+    },
     snippet = {
         expand = function(args)
             require('luasnip').lsp_expand(args.body)
@@ -40,6 +44,8 @@ local on_attach = function(client, bufnr)
     vimp.nnoremap({'silent'}, '<leader>ca', vim.lsp.buf.code_action)
     vimp.nnoremap({'silent'}, '<leader>cr', vim.lsp.buf.rename)
     vimp.nnoremap({'silent'}, '<leader>F', vim.lsp.buf.formatting)
+
+    -- require('virtualtypes').on_attach(client, bufnr)
 end
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -100,7 +106,7 @@ vimp.nnoremap('<leader>w0', ':wincmd c<cr>')
 -- vimp.nnoremap('<leader>`', ':20split term://zsh<cr>')
 require('toggleterm').setup {
   size = 15,
-  open_mapping = [[<leader>`]],
+  open_mapping = [[<leader>\]],
   hide_numbers = true,
   shade_terminals = true,
   start_in_insert = true,

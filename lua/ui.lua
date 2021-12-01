@@ -68,11 +68,21 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
+-- vim.diagnostic.config({
+--   virtual_text = true,
+--   signs = true,
+--   underline = true,
+--   update_in_insert = true,
+--   severity_sort = false,
+-- })
+
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = true,
+  virtual_text = {
+    source = "always",
+  },
   signs = true,
   underline = true,
-  update_in_insert = false,
+  update_in_insert = true,
 })
 
 require('indent_blankline').setup {

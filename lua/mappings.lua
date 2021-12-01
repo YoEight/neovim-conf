@@ -110,7 +110,7 @@ require('toggleterm').setup {
   hide_numbers = true,
   shade_terminals = true,
   start_in_insert = true,
-  insert_mappings = true,
+  insert_mappings = false,
   persist_size = true,
   direction = 'horizontal',
   close_on_exit = true,

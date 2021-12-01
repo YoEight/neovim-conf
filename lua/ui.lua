@@ -75,6 +75,11 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagn
   update_in_insert = false,
 })
 
+require('indent_blankline').setup {
+  show_current_context = true,
+  show_current_context_start = true,
+}
+
 --    highlight NvimTreeFolderIcon guibg=blue
 vim.cmd [[
     colorscheme gruvbox-material
